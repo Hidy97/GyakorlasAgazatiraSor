@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body{
+    background-image: url(kepek/teglafal.jpg);
+    font-size: 10px;
+    padding: 0;
+}
+
+main{
+    width: 1000px;
+    max-width: 80%;
+    margin: auto;
+    background-color: #333333;
+}
+
+header{
+    background-image: url(kepek/beer-new_401732638.jpg);
+    height: 300px;
+    background-size: cover;
+    font-weight: bold;
+    font-family: Garamond;
+    letter-spacing: 4px;
+    font-size: 32px;
+    text-align: left;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+nav li{
+    list-style-type: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+}
+
+nav li:hover{
+    background-color: antiquewhite;
+}
+
+nav a:hover{
+    color: rgb(102, 97, 97);
+}
+
+article{
+    text-align: justify;
+    font-size: 10px;
+    padding-left: 15px;
+    border: 1px solid white;
+    background-color: black;
+}
+
+article h2{
+    font-size: 15px;
+}
+
+article img{
+    width: 250px;
+    border: 1px solid white;
+    padding: 5px;
+}
+article li{
+    list-style-type: square;
+    padding-right: 20px;
+}
+
+article, nav{
+    font-size: 16px;
+}
+
+article{
+    padding-left: 5px;
+}
+
+nav{
+    padding-right: 5px;
+}
+
+footer{
+    text-align: center;
+    height: 50px;
+    background-color: #5f5a5a;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(114, 109, 109);
+}
+/*Oldal elrendezése*/
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:    "h h h"
+                            "a a n"
+                            "f f f";
+}
+
+header{
+    grid-area: h;
+}
+
+article{
+    grid-area: a;
+}
+
+nav{
+    grid-area: n;
+}
+
+footer{
+    grid-area: f;
+}
+
+article{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer{
+    display: grid;
+    grid-template-rows: 1fr;
+}
+/*Oldal elrendezése vége*/
+
+@media screen and (max-width: 700px){
+    *{
+        font-size: 2vw;
+    }
+    main{
+        grid-template-areas:    "h"
+                                "n"
+                                "h"
+                                "f";
+    }
+
+    article{
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    article img{
+        width: 180px;
+    }
+}
